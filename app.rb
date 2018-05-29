@@ -1,5 +1,13 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './models'
+set :database, 'sqlite3:users.sqlite3'
 
-set :database, 'sqlite3:whatever.sqlite3'
+
+
+get "/" do
+
+@users = User.all
+
+erb :"users/index"
+end

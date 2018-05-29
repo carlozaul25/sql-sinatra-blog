@@ -1,0 +1,4 @@
+<h1>All users</h1>
+<% @users.each_with_index do |u,i|%>
+<div><%= i + 1 %> <%= u.username %></div>
+<% end %>
