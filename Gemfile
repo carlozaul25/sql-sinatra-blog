@@ -1,5 +1,7 @@
-source 'http://www.rubygems.org'
-gem 'sinatra'
-gem 'sinatra-activerecord'
-gem 'sqlite3'
-gem 'rake'
+
+ source 'https://www.rubygems.org'  
+    gem 'sinatra'  
+    gem 'sinatra-activerecord'  
+    gem 'sqlite3'  
+    gem 'rake'  
+
