@@ -1,11 +1,11 @@
 
-require 'sinatra'  
+require 'sinatra'
   require 'sinatra/activerecord'
-  require './models'    
+  require './models'
   set :database, 'sqlite3:users.sqlite3'
   set :sessions, true
 
-get "/" do  
+get "/" do
 
 @users = User.all
 erb :"users/index"
@@ -13,27 +13,27 @@ end
 
 # signup
 
-get "/signup" do 
+get "/signup" do
 	erb :'users/signup'
-end  
+end
 
-post "/create" do 
+post "/create" do
 	User.create(username: params[:username], password: params[:password])
 	redirect "/"
 end
 
 # Login
 
-get "/login" do 
+get "/login" do
 	erb :'users/login'
 end
 
-post "/login" do 
+post "/login" do
 	user = User.where(username: params[:username]).first
 	if user.password == params[:password]
 		session[:user_id] = user.id
 		redirect "/"
-	else 
+	else
 		redirect "/login"
 		end
 	end
@@ -44,14 +44,14 @@ post "/login" do
 end
 	# blogs
 
-	get "/blogs" do 
+	get "/blogs" do
 	@blogs = Blog.all
 	erb :"posts/index"
 end
 
 # create blogs
 
-get "/blogs/new" do  
+get "/blogs/new" do
 	erb :"posts/new"
 end
 
@@ -61,7 +61,7 @@ def current_user
 	end
 end
 
-post "/create_blog" do 
+post "/create_blog" do
 	if !session[:user_id]
 		redirect "/login"
 	else
@@ -71,6 +71,25 @@ post "/create_blog" do
 	end
 end
 
+# update users
+
+get "/users/edit" do
+ if !session[:user_id]
+   redirect "/login"
+ else
+ @user = User.find(session[:user_id])
+ erb :"users/edit"
+ end
+end
+
+post "/edit-user" do
+ @user = User.find(session[:user_id])
+ @user.update(username: params[:username],password: params[:password])
+ redirect "/"
+end
 
 
-
+# delete users
+get '/users/deleted' do
+  "Hello World"
+end

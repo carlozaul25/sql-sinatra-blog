@@ -1,7 +1,5 @@
 GEM
-
-  remote: http://www.rubygems.org/
-
+  remote: https://www.rubygems.org/
   specs:
     activemodel (5.2.0)
       activesupport (= 5.2.0)
@@ -48,6 +46,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-
    1.16.2
-
