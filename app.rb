@@ -42,6 +42,11 @@ post "/login" do
 	redirect "/login"
 end
 
+get "/blogs" do 
+	@blogs = Blog.all
+	erb :"blogs/index"
+end
+
 
 
 
