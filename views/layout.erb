@@ -7,16 +7,21 @@
 <body>
 	
 	<nav>
-	<!-- 	<li><a href="/">Home</a></li> -->
+		<li><a href="/">Home</a></li>
 		<li><a href="/login">login</a></li>
 		<li><a href="/signup">Create account</a></li>
-		<!-- <li><a href="/blogs"></a></li> -->
+		<li><a href="/blogs/new">Blogs</a></li>
 	</nav>
 
 		<form action="/logout" method='post'>
 			<input type="submit" value="Logout">
 		</form>
 
+		<div>
+		<% if current_user %>
+			<%= current_user.username  %>
+		<% end %>
+	</div>
 
 <%= yield %>
 
