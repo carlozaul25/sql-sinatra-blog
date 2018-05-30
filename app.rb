@@ -10,6 +10,13 @@ get "/" do
 erb :"users/index"
 end
 
+# signup
+
 get "/signup" do 
 	erb :'users/signup'
 end  
+
+post "/create" do 
+	User.create(username: params[:username], password: params[:password])
+	redirect "/"
+end
