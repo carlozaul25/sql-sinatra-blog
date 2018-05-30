@@ -16,4 +16,5 @@ ActiveRecord::Schema.define(version: 2018_05_30_052952) do
     t.string "username"
     t.string "password"
   end
+
 end

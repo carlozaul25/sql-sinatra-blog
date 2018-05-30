@@ -51,7 +51,7 @@ end
 
 	# blogs
 
-	get "/blogs" do 
+	get "/posts" do 
 	@blogs = Blog.all
 	erb :"posts/index"
 end
