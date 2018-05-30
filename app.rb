@@ -42,6 +42,13 @@ post "/login" do
 	session[:user_id] = nil
 	redirect "/login"
 end
+
+	def current_bloger
+	if(session[:user_id])
+		@current_bloger = User.find(session[:user_id])
+	end
+end
+
 	# blogs
 
 	get "/blogs" do 
@@ -55,19 +62,14 @@ get "/blogs/new" do
 	erb :"posts/new"
 end
 
-def current_user
-	if(session[:user_id])
-		@current_user = User.find(session[:user_id])
-	end
-end
 
 post "/create_blog" do 
 	if !session[:user_id]
 		redirect "/login"
 	else
-		current_user = User.find(session[:user_id])
-		Blog.create(title: params[:title], content: params[:content], user_id: current_user.id)
-		redirect "/blogs"
+		current_bloger = User.find(session[:user_id])
+		Blog.create(title: params[:title], content: params[:content], user_id: current_bloger.id)
+		redirect "/posts"
 	end
 end
 
