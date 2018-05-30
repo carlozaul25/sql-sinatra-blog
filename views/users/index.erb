@@ -1,3 +1,8 @@
+<form action="/logout" method='post'>
+  <input type="submit" value="Logout">
+</form>
+
+
 <h2>All users:</h2>
 <% @users.each_with_index do |u, i| %>
 <div><%= i + 1 %> <%= u.username %></div>
