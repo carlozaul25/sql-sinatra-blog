@@ -20,3 +20,26 @@ post "/create" do
 	User.create(username: params[:username], password: params[:password])
 	redirect "/"
 end
+
+# Login
+
+get "/login" do 
+	erb :'users/login'
+end
+
+post "/login" do 
+	user = User.where(username: params[:username]).first
+	if user.password == params[:password]
+		session[:user_id] = user.id
+		redirect "/"
+	else 
+		redirect "/login"
+	end
+	end
+
+
+
+
+
+
+	
