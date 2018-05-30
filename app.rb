@@ -67,11 +67,17 @@ post "/create_blog" do
 	if !session[:user_id]
 		redirect "/login"
 	else
-		current_bloger = User.find(session[:user_id])
-		Blog.create(title: params[:title], content: params[:content], user_id: current_bloger.id)
-		redirect "/posts"
-	end
+	current_bloger = User.find(session[:user_id])
+	Blog.create(title: params[:title], content: params[:content], user_id: current_bloger.id)
+	redirect "/posts"
 end
+end
+
+# 	def destroy 
+# 	@Blogs = Blog.find(params[:user_id])
+# 	blogs.destroy
+# 	redirect 'blogs'
+# end
 
 
 
