@@ -1,3 +1,4 @@
+
 require 'sinatra'  
   require 'sinatra/activerecord'
   require './models'    
@@ -46,6 +47,7 @@ get "/blogs" do
 	@blogs = Blog.all
 	erb :"blogs/index"
 end
+
 
 
 
