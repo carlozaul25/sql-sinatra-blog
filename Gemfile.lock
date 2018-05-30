@@ -1,5 +1,9 @@
 GEM
+<<<<<<< HEAD
   remote: http://www.rubygems.org/
+=======
+  remote: https://www.rubygems.org/
+>>>>>>> 149f1dd39b0c0b3c82f90e3755fcd13bb801ca17
   specs:
     activemodel (5.2.0)
       activesupport (= 5.2.0)
@@ -46,4 +50,8 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.16.1
+=======
+   1.16.2
+>>>>>>> 149f1dd39b0c0b3c82f90e3755fcd13bb801ca17
