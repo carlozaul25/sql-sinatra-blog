@@ -1,9 +1,15 @@
 GEM
 <<<<<<< HEAD
+<<<<<<< HEAD
   remote: http://www.rubygems.org/
 =======
   remote: https://www.rubygems.org/
 >>>>>>> 149f1dd39b0c0b3c82f90e3755fcd13bb801ca17
+=======
+
+  remote: http://www.rubygems.org/
+
+>>>>>>> 1bba8dbdecb45601c7b7712f470d7f4cf53e6596
   specs:
     activemodel (5.2.0)
       activesupport (= 5.2.0)
@@ -51,7 +57,13 @@ DEPENDENCIES
 
 BUNDLED WITH
 <<<<<<< HEAD
+<<<<<<< HEAD
    1.16.1
 =======
    1.16.2
 >>>>>>> 149f1dd39b0c0b3c82f90e3755fcd13bb801ca17
+=======
+
+   1.16.2
+
+>>>>>>> 1bba8dbdecb45601c7b7712f470d7f4cf53e6596

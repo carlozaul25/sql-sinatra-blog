@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_05_29_213910) do
 
   create_table "comments", force: :cascade do |t|
@@ -19,6 +20,10 @@ ActiveRecord::Schema.define(version: 2018_05_29_213910) do
 =======
 ActiveRecord::Schema.define(version: 2018_05_30_052952) do
 >>>>>>> 149f1dd39b0c0b3c82f90e3755fcd13bb801ca17
+=======
+ActiveRecord::Schema.define(version: 2018_05_30_052952) do
+
+>>>>>>> 1bba8dbdecb45601c7b7712f470d7f4cf53e6596
 
   create_table "users", force: :cascade do |t|
     t.string "username"
