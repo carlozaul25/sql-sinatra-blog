@@ -71,6 +71,11 @@ post "/create_blog" do
 	end
 end
 
+# destroy
+	delete '/:id' do 
+		Blog.delete(params[:user_id])
+		redirect '/'
+	end
 
 
 
