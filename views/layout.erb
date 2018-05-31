@@ -7,12 +7,12 @@
 <body>
 	
 	<nav>
-		<li><a href="/">Home</a></li>
-		<li><a href="/login">login</a></li>
+		<li><a href="/">Users</a></li>
+		<li><a href="/login">Login</a></li>
 		<li><a href="/signup">Create account</a></li>
-		<li><a href="/blogs/new">Create blogs</a></li>
-		<li><a href="posts/index">All Blogs</a></li>
-		<li><a href="/users/edit">Edit user</a></li>
+		<li><a href="/blogs/new">Create Blogs</a></li>
+		<li><a href="/blogs">All Blogs</a></li>
+		<li><a href="/users/edit">Edit User</a></li>
 	</nav>
 
 		<form action="/logout" method='post'>
@@ -26,6 +26,6 @@
 	</div>
 
 <%= yield %>
-
+<script type="text/javascript" src='javascript/main.js'></script>
 </body>
 </html>

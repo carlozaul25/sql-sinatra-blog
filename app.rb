@@ -88,5 +88,18 @@ end
  	redirect "/"
 end
 
+	# delete
+
+# 	def destroy 
+# 	@blogs = Blog.find(params[:user_id])
+# 	@blogs.destroy
+# 	redirect "/blogs"
+# end	
+# end
+
+
+
+
+
 
 
