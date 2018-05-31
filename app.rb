@@ -73,12 +73,12 @@ end
 
 # update users
 
-get "/users/edit" do
+	get "/users/edit" do
  if !session[:user_id]
-   redirect "/login"
+  	 redirect "/login"
  else
- @user = User.find(session[:user_id])
- erb :"users/edit"
+ 	@user = User.find(session[:user_id])
+ 	erb :"users/edit"
  end
 end
 
