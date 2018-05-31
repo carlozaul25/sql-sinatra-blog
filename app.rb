@@ -71,8 +71,22 @@ post "/create_blog" do
 	end
 end
 
-# delete
+# update users
 
+get "/users/edit" do
+ if !session[:user_id]
+   redirect "/login"
+ else
+ @user = User.find(session[:user_id])
+ erb :"users/edit"
+ end
+end
+
+	post "/edit-user" do
+ 	@user = User.find(session[:user_id])
+ 	@user.update(username: params[:username],password: params[:password])
+ 	redirect "/"
+end
 
 
 
