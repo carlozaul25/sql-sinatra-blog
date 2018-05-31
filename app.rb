@@ -1,4 +1,3 @@
-
 require 'sinatra'
   require 'sinatra/activerecord'
   require './models'
@@ -6,13 +5,11 @@ require 'sinatra'
   set :sessions, true
 
 get "/" do
-
 @users = User.all
 erb :"users/index"
 end
 
 # signup
-
 get "/signup" do
 	erb :'users/signup'
 end
@@ -34,6 +31,7 @@ post "/login" do
 		session[:user_id] = user.id
 		redirect "/"
 	else
+    
 		redirect "/login"
 		end
 	end
@@ -51,6 +49,7 @@ end
 
 # create blogs
 
+
 get "/blogs/new" do
 	erb :"posts/new"
 end
@@ -60,6 +59,7 @@ def current_user
 		@current_user = User.find(session[:user_id])
 	end
 end
+
 
 post "/create_blog" do
 	if !session[:user_id]
@@ -82,14 +82,13 @@ get "/users/edit" do
  end
 end
 
-post "/edit-user" do
- @user = User.find(session[:user_id])
- @user.update(username: params[:username],password: params[:password])
- redirect "/"
-end
-
 
 # delete users
 get '/users/deleted' do
   "Hello World"
+end
+	post "/edit-user" do
+ 	@user = User.find(session[:user_id])
+ 	@user.update(username: params[:username],password: params[:password])
+ 	redirect "/"
 end

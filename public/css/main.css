@@ -1,4 +1,21 @@
+nav{
+	background-color: black;
+}
+
 nav li  {
 	display: inline;
 	padding: 10px;
+}
+
+nav li a:visited{
+	color: white;
+}
+
+.logo{
+	float: left;;
+	border-radius: 50%;
+}
+
+body{
+	background-color: darkslategray;
 }
